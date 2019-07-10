@@ -3,5 +3,5 @@ PassengerAppRoot "/home/limecatn/less"
 PassengerBaseURI "/"
 PassengerNodejs "/home/limecatn/nodevenv/less/10/bin/node"
 PassengerAppType node
-PassengerStartupFile bin/www
+PassengerStartupFile /bin/www
 # DO NOT REMOVE. CLOUDLINUX PASSENGER CONFIGURATION END
