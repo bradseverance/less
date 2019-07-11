@@ -10,20 +10,20 @@ var lessMiddleware = require('less-middleware');
 
 var app = express();
 
-app.use(logger('dev'));
+// app.use(logger('dev'));
 
-app.set('view engine', 'hbs');
+// app.set('view engine', 'hbs');
 
-app.use(express.json());
-app.use(express.urlencoded({ extended: false }));
-app.use(cookieParser());
-app.use(lessMiddleware(path.join(__dirname, '/public')));
-app.use(express.static(path.join(__dirname, 'public')));
+// app.use(express.json());
+// app.use(express.urlencoded({ extended: false }));
+// app.use(cookieParser());
+// app.use(lessMiddleware(path.join(__dirname, '/public')));
+// app.use(express.static(path.join(__dirname, 'public')));
 
-app.use('/', indexRouter);
-app.use('/users', usersRouter);
+// app.use('/', indexRouter);
+// app.use('/users', usersRouter);
 
-module.exports = app;
+// module.exports = app;
 
 var http = require('http');
 var server = http.createServer(function(req, res) {
