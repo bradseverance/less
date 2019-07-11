@@ -23,19 +23,4 @@ app.use(express.static(path.join(__dirname, 'public')));
 app.use('/', indexRouter);
 app.use('/users', usersRouter);
 
-
-var http = require('http');
-var server = http.createServer(app);
-server.listen();
-
-// var http = require('http');
-// var server = http.createServer(function(req, res) {
-//     res.writeHead(200, {'Content-Type': 'text/plain'});
-//     var message = 'It fucking works!\n',
-//         version = 'NodeJS ' + process.versions.node + '\n',
-//         response = [message, version].join('\n');
-//     res.end(response);
-// });
-// server.listen();
-
-// module.exports = app;
+module.exports = app;
