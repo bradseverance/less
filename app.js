@@ -23,7 +23,10 @@ app.use(express.static(path.join(__dirname, 'public')));
 app.use('/', indexRouter);
 app.use('/users', usersRouter);
 
-module.exports = app;
+
+
+var server = http.createServer(app);
+server.listen();
 
 // var http = require('http');
 // var server = http.createServer(function(req, res) {
@@ -34,3 +37,5 @@ module.exports = app;
 //     res.end(response);
 // });
 // server.listen();
+
+module.exports = app;
