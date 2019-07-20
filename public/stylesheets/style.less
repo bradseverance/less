@@ -1,10 +1,60 @@
-@linkColor: #00B7FF;
+@import "fonts_colors";
+@import "divs_headers";
+@import "mixins";
 
-body {
-  padding: 50px;
-  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+// some basic stuff
+html, body, div, span, object, iframe, h1, h2,
+h3, h4, h5, h6, p, blockquote, pre, abbr, address,
+cite, code, del, dfn, em, img, ins, kbd, q, samp,
+small, strong, sub, sup, var, b, i, dl, dt, dd, ol,
+ul, li, fieldset, form, label, legend, table, caption,
+tbody, tfoot, thead, tr, th, td, article, aside, canvas,
+details, figcaption, figure, footer, header, hgroup, menu,
+nav, section, summary, time, mark, audio, video {
+  border:0;
+  font:inherit;
+  font-size:100%;
+  margin:0;
+  padding:0;
+  vertical-align:baseline;
 }
 
-a {
-  color: @linkColor;
+// more basic stuff
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+  display:block;
+}
+
+html, body {
+	background: @backColor;
+	font-family: @smallFont;
+	color: @textColor;
+	line-height: 1.5em;
+}
+
+#body-div {
+  width: 90%;
+	max-width: 800px;
+	background: @backColor;
+	margin: 30px auto;
+}
+
+.normal-box {
+  .box();
+}
+
+.center {
+  text-align: center;
+}
+
+h1 {
+  .head()
+}
+
+p {
+  .pgraph()
+}
+
+.remBttm {
+  .rmBttm();
 }
