@@ -1,5 +1,4 @@
 // boxes for stuff
-
 .box(@bColor: @redColor, @bWidth: 2px, @round: 5px, @padding: 10px, @margin: 0px) {
   padding: @padding;
   margin: @margin;
@@ -7,8 +6,8 @@
   border-color: @bColor;
   border-style: solid;
   border-width: @bWidth;
+  .mBttm();
 }
-
 
 // header
 .head(@tSize: 1.5em, @tColor: @textColor, @tAlign: center) {
@@ -19,6 +18,7 @@
   .mBttm();
 }
 
+// paragraph
 .pgraph(@tSize: .87em, @tColor: @textColor, @tAlign: left) {
   font-family: @smallFont;
   font-size: @tSize;

@@ -60,4 +60,8 @@ typings/
 # next.js build output
 .next
 
+# visual studio code
 *code-workspace
+
+# no css; all less;
+*.css
