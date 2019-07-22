@@ -43,6 +43,22 @@ html, body {
   .box();
 }
 
+.green-box {
+  .box(@greenColor, 4px, 10px)
+}
+
+.orange-box {
+  .box(@linkColor, 7px, 5px);
+
+  p {
+    .pgraph(1.1em, @linkColor)
+  }
+
+  h1 {
+    .head(1.8em, @redColor, left)
+  }
+}
+
 .center {
   text-align: center;
 }
@@ -59,6 +75,7 @@ p {
   .rmBttm();
 }
 
-a {
+a, a:hover, a:visited {
   color: @linkColor;
+  text-decoration: underline;
 }
