@@ -39,6 +39,10 @@ html, body {
 	margin: 30px auto;
 }
 
+.clear {
+  clear: both;
+}
+
 .normal-box {
   .box();
 }
@@ -78,4 +82,25 @@ p {
 a, a:hover, a:visited {
   color: @linkColor;
   text-decoration: underline;
+}
+
+.div-left {
+	float: left;
+  width: 25%;
+  
+  @media all and (max-width: 601px) {
+    float: none;
+		width: 100%;
+  }
+}
+
+.div-right {
+  float: right;
+  width: 67%;
+  
+  @media all and (max-width: 601px) {
+    float: none;
+		width: 100%;
+  }
+
 }
