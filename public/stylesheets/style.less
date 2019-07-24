@@ -1,6 +1,5 @@
 @import "fonts_colors";
 @import "divs_headers";
-@import "mixins";
 
 // some basic stuff
 html, body, div, span, object, iframe, h1, h2,
@@ -63,6 +62,18 @@ html, body {
   }
 }
 
+.image-box {
+  .box(@linkColor, 5px, 5px);
+
+  p {
+    .pgraph()
+  }
+
+  h1 {
+    .head(1.8em, @redColor)
+  }
+} 
+
 .center {
   text-align: center;
 }
@@ -90,17 +101,53 @@ a, a:hover, a:visited {
   
   @media all and (max-width: 601px) {
     float: none;
-		width: 100%;
+		width: unset;
   }
 }
 
 .div-right {
   float: right;
-  width: 67%;
+  width: 63%;
   
   @media all and (max-width: 601px) {
     float: none;
-		width: 100%;
+		width: unset;
   }
 
 }
+
+pre {
+  font-family: monospace;
+}
+
+// kitties!
+#kitties {
+  width: 100%;
+
+  .kitty {
+
+    margin: 0 5px 5px 0;
+    float: left;
+
+    a div {
+      width: 200px;
+      height: 200px;
+      background-size: contain;
+    }
+
+  }
+
+  // create kitties
+  .create-kitties(6);
+
+  .create-kitties(@n, @i: 1) when (@i =< @n) {
+    .kitty:nth-child(@{i}) {
+      a div {        
+        background-image: url("@{kittyImgs}kitty@{i}.png");
+      }      
+    }
+    .create-kitties(@n, (@i + 1));
+  }
+
+}
+
